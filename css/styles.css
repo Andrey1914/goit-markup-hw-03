@@ -1,6 +1,7 @@
 :root {
   --page-bg-color: #ffffff;
   --img-bg-color: #eeeeee;
+  --bg-hero-color: #2f303a;
   --footer-color: #2f303a;
   --color-of-headers: #212121;
   --text-color: #757575;
@@ -16,7 +17,49 @@ body {
   background-color: var(--page-bg-color);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* header */
+.container {
+  display: flex;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-nav {
+  display: flex;
+  flex-direction: row;
+  margin-left: 93px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.container-contact {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
 /* logo */
+.logo {
+  margin-top: 24px;
+  margin-bottom: 25px;
+}
+
 .logo,
 .footer-logo {
   font-family: 'Raleway', sans-serif;
@@ -34,17 +77,9 @@ span {
 
 /* navigation */
 .site-nav,
-.contact,
-.experience-list,
-.activity-list,
-.team-list,
-.contact-list,
-.buttons-list,
-.works-list,
-.filter-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.contact {
+  display: flex;
+  flex-direction: row;
 }
 
 .site-nav a {
@@ -53,13 +88,13 @@ span {
 
 .site-nav a,
 .contact a {
-  font-style: Medium;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.1;
   line-height: 100%;
   letter-spacing: 0.02em;
   text-decoration: none;
+  margin-left: 50px;
 }
 
 /* contact */
@@ -68,15 +103,28 @@ span {
 }
 
 /* hero */
+.hero {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: var(--bg-hero-color);
+}
+
 .hero-title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.4;
   letter-spacing: 0.06em;
-  margin: 0;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 200px;
 }
 
 .button {
+  display: block;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 200px;
   font-weight: bold;
   font-size: 16px;
   line-height: 1.9;
@@ -84,23 +132,36 @@ span {
   color: #ffffff;
   width: 200px;
   height: 50px;
-  left: 700px;
-  top: 430px;
   background: #2196f3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
   cursor: pointer;
 }
 
 /* experience */
+.experience {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: row;
+  width: inherit;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  /* flex-basis: calc(100% / 4); */
+}
+.experience-item {
+  width: 270px;
+}
 .experience-title {
   font-weight: bold;
   font-size: 14px;
   line-height: 1.1;
   letter-spacing: 0.03em;
   color: var(--color-of-headers);
-  margin: 0;
+  margin-bottom: 10px;
 }
 
 .experience-text {
@@ -108,10 +169,24 @@ span {
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--text-color);
-  margin: 0;
 }
 
 /* activity */
+.activity {
+  padding-bottom: 94px;
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: row;
+  width: inherit;
+  justify-content: space-between;
+}
+
+.activity-title {
+  margin-bottom: 50px;
+}
+
 .activity-title,
 .team-header {
   font-weight: bold;
@@ -119,24 +194,51 @@ span {
   line-height: 1.2;
   letter-spacing: 0.03em;
   color: var(--color-of-headers);
-  margin: 0;
+  text-align: center;
 }
 
 /* our team */
+.team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background: #f5f4fa;
+}
+
+.team-header {
+  margin-bottom: 50px;
+}
+
+.team-list {
+  display: flex;
+  flex-direction: row;
+  width: inherit;
+  justify-content: space-between;
+}
+
+.team-item {
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
 .employee,
 .speciality {
   font-size: 16px;
   line-height: 1.2;
   letter-spacing: 0.03em;
-  margin: 0;
+  text-align: center;
 }
 
 .employee {
   font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 10px;
   color: var(--color-of-headers);
 }
 
 .speciality {
+  margin-bottom: 30px;
   color: var(--text-color);
 }
 
@@ -145,8 +247,19 @@ span {
   background-color: var(--footer-color);
 }
 
+.container-footer {
+  display: block;
+}
+
 .footer-logo {
+  display: block;
+  margin-top: 60px;
   color: #ffffff;
+}
+
+.contact-list {
+  margin-top: 20px;
+  margin-bottom: 60px;
 }
 
 .contact-list a {
@@ -191,7 +304,6 @@ span {
 
 .completed-work {
   visibility: hidden;
-  margin: 0;
 }
 
 .works-title {
@@ -199,7 +311,6 @@ span {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  margin: 0;
   color: var(--color-of-headers);
 }
 
@@ -207,7 +318,6 @@ span {
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.03em;
-  margin: 0;
   color: var(--text-color);
 }
 
