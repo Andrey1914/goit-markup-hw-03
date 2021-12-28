@@ -31,6 +31,10 @@ ul {
 }
 
 /* header */
+.page-header {
+  border-bottom: 1px solid #ececec;
+}
+
 .container {
   display: flex;
   width: 1200px;
@@ -302,11 +306,76 @@ span {
   color: rgba(255, 255, 255, 0.6);
 }
 
+/* portfolio */
+.partners {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .completed-work {
   visibility: hidden;
 }
 
-.works-title {
+.filter-list {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  width: 611px;
+}
+
+.filter {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  color: var(--color-of-headers);
+  background: #f5f4fa;
+  border: none;
+  padding: 6px 22px 6px 22px;
+  border-radius: 4px;
+  margin-bottom: 50px;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.filter:hover,
+.filter:focus,
+.filter:active {
+  color: #ffffff;
+  background-color: var(--accent-color);
+}
+
+.card-box {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 1px solid tomato;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+  border: 1px solid tomato;
+}
+
+.card-list > .card-item {
+  flex-basis: calc(100% / 3 - 30px);
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  border: 1px solid tomato;
+}
+
+.card-title {
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
@@ -321,27 +390,6 @@ span {
   color: var(--text-color);
 }
 
-.filter {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.6;
-  letter-spacing: 0.03em;
-  color: var(--color-of-headers);
-  background: #f5f4fa;
-  border: none;
-  width: 130px;
-  height: 38px;
-  left: 865px;
-  top: 174px;
-  border-radius: 4px;
-  margin-bottom: 10px;
-  box-shadow: none;
-  cursor: pointer;
-}
-
-.filter:hover,
-.filter:focus,
-.filter:active {
-  color: #ffffff;
-  background-color: var(--accent-color);
+.card-text {
+  padding: 20px 24px 20px 24px;
 }
