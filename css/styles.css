@@ -30,16 +30,25 @@ ul {
   list-style: none;
 }
 
+img {
+  display: block;
+}
+
 /* header */
 .page-header {
   border-bottom: 1px solid #ececec;
 }
 
-.container {
+.container-hedear {
   display: flex;
+}
+
+.container {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .container-nav {
@@ -107,10 +116,9 @@ span {
 }
 
 /* hero */
-.hero {
+.section {
   padding-top: 94px;
   padding-bottom: 94px;
-  background-color: var(--bg-hero-color);
 }
 
 .hero-title {
@@ -119,7 +127,6 @@ span {
   line-height: 1.4;
   letter-spacing: 0.06em;
   text-align: center;
-  color: #ffffff;
   margin-top: 200px;
 }
 
@@ -143,15 +150,9 @@ span {
 }
 
 /* experience */
-.experience {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .experience-list {
   display: flex;
   flex-direction: row;
-  width: inherit;
   justify-content: space-between;
   /* flex-wrap: wrap; */
   /* flex-basis: calc(100% / 4); */
@@ -176,14 +177,9 @@ span {
 }
 
 /* activity */
-.activity {
-  padding-bottom: 94px;
-}
-
 .activity-list {
   display: flex;
   flex-direction: row;
-  width: inherit;
   justify-content: space-between;
 }
 
@@ -202,12 +198,6 @@ span {
 }
 
 /* our team */
-.team {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  background: #f5f4fa;
-}
-
 .team-header {
   margin-bottom: 50px;
 }
@@ -215,7 +205,6 @@ span {
 .team-list {
   display: flex;
   flex-direction: row;
-  width: inherit;
   justify-content: space-between;
 }
 
@@ -253,17 +242,17 @@ span {
 
 .container-footer {
   display: block;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer-logo {
   display: block;
-  margin-top: 60px;
   color: #ffffff;
 }
 
 .contact-list {
   margin-top: 20px;
-  margin-bottom: 60px;
 }
 
 .contact-list a {
@@ -307,13 +296,6 @@ span {
 }
 
 /* portfolio */
-.partners {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
 .completed-work {
   visibility: hidden;
 }
@@ -348,31 +330,18 @@ span {
   background-color: var(--accent-color);
 }
 
-.card-box {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  border: 1px solid tomato;
-}
-
 .card-list {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-bottom: -30px;
-  border: 1px solid tomato;
 }
 
 .card-list > .card-item {
   flex-basis: calc(100% / 3 - 30px);
   background: #ffffff;
-  border: 1px solid #eeeeee;
-  box-sizing: border-box;
   margin-left: 30px;
   margin-bottom: 30px;
-  border: 1px solid tomato;
 }
 
 .card-title {
@@ -391,5 +360,7 @@ span {
 }
 
 .card-text {
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
   padding: 20px 24px 20px 24px;
 }
